@@ -1,4 +1,5 @@
-# MyFirstCrewAIProject
+# Business-Process-Automation-with-CrewAI
+
 
 ## Description
 Add your project description here.
@@ -6,7 +7,7 @@ Add your project description here.
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/MyFirstCrewAIProject.git
+    git clone https://github.com/Ayesha0300/Business-Process-Automation-with-CrewAI.git
     cd MyFirstCrewAIProject
     ```
 
