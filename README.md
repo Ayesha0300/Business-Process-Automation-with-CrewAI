@@ -2,7 +2,7 @@
 
 
 ## Description
-he "Business-Process-Automation-with-CrewAI" project is designed to streamline and automate complex business workflows by leveraging the CrewAI framework. CrewAI enables the orchestration of multiple autonomous AI agents, each assigned specific roles and goals, to collaboratively execute multi-step tasks with enhanced efficiency and accuracy.
+The "Business-Process-Automation-with-CrewAI" project is designed to streamline and automate complex business workflows by leveraging the CrewAI framework. CrewAI enables the orchestration of multiple autonomous AI agents, each assigned specific roles and goals, to collaboratively execute multi-step tasks with enhanced efficiency and accuracy.
 
 Key Features:
 
