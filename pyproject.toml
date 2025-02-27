@@ -1,0 +1,42 @@
+[project]
+name = "myfirstcrewaiproject"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ayesha0300", email = "ayeshabashir030@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "crewai>=0.102.0",
+    "crewai-tools>=0.36.0",
+    "langchain-openai>=0.1.0",
+    "langchain-google-genai>=0.1.0",
+    "python-dotenv>=1.0.0",
+    "onnxruntime==1.15.0",
+]
+
+[tool.isort]
+profile = "black"
+known_first_party = ["crewai"]
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+pytest-vcr = "^1.0.2"
+
+[tool.poetry]
+name = "myfirstcrewaiproject"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+
+
+[tool.poetry.scripts]
+kickoff = "myfirstcrewaiproject.main:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
