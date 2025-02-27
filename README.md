@@ -41,19 +41,19 @@ For more detailed information and to access the project's resources, please visi
 1. Clone the repository:
     ```sh
     git clone https://github.com/Ayesha0300/Business-Process-Automation-with-CrewAI.git
-    cd MyFirstCrewAIProject
+   
     ```
 
 2. Create and activate a virtual environment:
     ```sh
-    python -m venv .venv
+     uv venv
     .venv\Scripts\activate  # On Windows
     source .venv/bin/activate  # On macOS/Linux
     ```
 
 3. Install the dependencies:
     ```sh
-    pip install -r requirements.txt
+    uv pip install -r requirements.txt
     ```
 
 ## Running the Streamlit App
