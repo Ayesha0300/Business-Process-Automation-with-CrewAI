@@ -12,7 +12,7 @@ def main():
             automation_crew = AutomationCrew(business_info)
             result = automation_crew.run()
             st.success("Automation completed successfully!")
-            st.write(result)
+            st.markdown(result)  # Changed from st.write to st.markdown
         else:
             st.error("Please enter the business information.")
 

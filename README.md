@@ -56,6 +56,15 @@ For more detailed information and to access the project's resources, please visi
     uv pip install -r requirements.txt
     ```
 
+4. **Set up your API Key**:
+    Create a file named `.env` in the root directory of the project.
+    Add your Google API key to this file:
+    ```env
+    GOOGLE_API_KEY='your_actual_google_api_key_here'
+    ```
+    Replace `'your_actual_google_api_key_here'` with your real Google API Key.
+    Refer to the `.env.example` file for a template.
+
 ## Running the Streamlit App
 1. Run the Streamlit app:
     ```sh

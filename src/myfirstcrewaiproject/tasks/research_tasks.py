@@ -1,12 +1,14 @@
 from crewai import Task
 from textwrap import dedent
-import google.generativeai as genai
+import google.generativeai as genai # This import might not be necessary if not used directly
 
 class CustomTasks:
-    def __init__(self, api_key=None):
-        """Initialize the class and optionally configure the Gemini API."""
-        if api_key:
-            genai.configure(api_key=api_key)
+    def __init__(self):
+        """Initialize the class. API configuration is handled globally."""
+        # API key configuration is now handled by config.py
+        # if api_key: # Removed
+        #     genai.configure(api_key=api_key) # Removed
+        pass
 
     def process_identification_task(self, agent, business_info):
         """Identify business processes that can be automated."""
@@ -24,19 +26,18 @@ class CustomTasks:
                 including recommendations for using AI to streamline filming and editing processes.""")
         )
 
-    def automation_design_task(self, agent, identified_processes):
-        """Design CrewAI configurations to automate the identified processes."""
+    def automation_design_task(self, agent, process_identification_task_context):
+        """Design CrewAI configurations to automate the identified processes based on context."""
+        description = dedent("""\
+            Analyze the output of the process identification task, which is available in the context.
+            Based on the identified processes, design CrewAI setups to automate them.
+            Ensure that these setups are intuitive for users with no prior AI knowledge,
+            focusing on simplifying content production and editing.""")
         return Task(
-            description=dedent(f"""\
-                Based on the identified processes below, design CrewAI setups to automate them:
-                
-                {identified_processes}
-                
-                Ensure that these setups are intuitive for users with no prior AI knowledge, 
-                focusing on simplifying content production and editing."""),
-
+            description=description,
             agent=agent,
             expected_output=dedent("""\
                 Detailed CrewAI automation plans, including user-friendly tools and technologies 
-                for automating YouTube video production and post-production tasks.""")
+                for automating YouTube video production and post-production tasks."""),
+            context=[process_identification_task_context]
         )
