@@ -3,9 +3,9 @@ name: Business Process Automation CI/CD
 
 on:
   push:
-    branches: [ main, master, develop ]
+    branches: [ main , develop ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
   schedule:
     - cron: '0 3 * * 0'    # weekly at 03:00 UTC on Sunday
   workflow_dispatch:
